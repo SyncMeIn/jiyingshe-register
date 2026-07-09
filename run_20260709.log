@@ -1,0 +1,28 @@
+2026-07-09 17:29:55.033 | INFO     | src.main:_run:64 - [main] loaded 1 accounts from docs/7.100.xls (start_row=3)
+2026-07-09 17:29:55.033 | INFO     | src.main:_run:70 - ===== [1/1] fishnet.hoagies-2v@icloud.com (row=3) =====
+2026-07-09 17:29:55.034 | INFO     | src.browser:open_browser:77 - [browser] launching CloakBrowser (headless=False, geoip=True, humanize=True)
+2026-07-09 17:30:03.062 | INFO     | src.phone_client:get_balance:211 - [firefox] 余额: 163.4800
+2026-07-09 17:30:03.062 | INFO     | src.phone_client:get_phone:132 - [firefox] getPhone iid=2850 country=jpn
+2026-07-09 17:30:04.442 | SUCCESS  | src.phone_client:get_phone:143 - [firefox] phone=07093969088, pkey=3B3F9AB2E76B...
+2026-07-09 17:30:04.443 | SUCCESS  | src.registrar:_init_firefox:646 - [firefox] 手机号: 07093969088
+2026-07-09 17:30:04.443 | INFO     | src.registrar:step1_send_code:115 - [step1] 清除 cookies 确保新会话
+2026-07-09 17:30:04.454 | INFO     | src.registrar:step1_send_code:117 - [step1] goto https://jumpcs.shueisha.co.jp/shop/customer/entryonetimepasswordsend.aspx
+2026-07-09 17:30:09.839 | INFO     | src.registrar:step1_send_code:121 - [step1] mail=fishnet.hoagies-2v@icloud.com pwd=Oneaaa8008
+2026-07-09 17:30:30.114 | INFO     | src.registrar:step1_send_code:127 - [step1] 点击 送信する (attempt=1)
+2026-07-09 17:30:38.065 | INFO     | src.registrar:step1_send_code:137 - [step1] ✅ → https://jumpcs.shueisha.co.jp/shop/customer/entry.aspx?username=65126b10485f5688b9ff3f33e98adb93ede90c5da9d8787a9878100542628d46e04471cf45689876990731ba7e74cb1ec028b0faea16c3f64ff449a006cb56db
+2026-07-09 17:30:38.065 | DEBUG    | src.registrar:register_account:570 - [mail] session username=65126b10485f5688b9ff...
+2026-07-09 17:30:38.065 | INFO     | src.registrar:register_account:572 - [mail] 等待验证码邮件 (fishnet.hoagies-2v@icloud.com)
+2026-07-09 17:30:38.065 | INFO     | src.mail_client:connect:64 - [mail] connecting imap.mail.me.com:993
+2026-07-09 17:30:39.848 | INFO     | src.mail_client:connect:72 - [mail] connected (2450 msgs)
+2026-07-09 17:30:59.807 | INFO     | src.mail_client:fetch_latest_code:184 - [mail] #1 轮询中... (等19s, seq≤2450)
+2026-07-09 17:31:04.041 | SUCCESS  | src.mail_client:fetch_latest_code:180 - [mail] #2 ✅ 验证码=691640 | 收件=fishnet.hoagies-2v@icloud.com | seq=2451 | Thu, 9 Jul 2026 09:30:35 +0000
+2026-07-09 17:31:04.614 | SUCCESS  | src.registrar:register_account:592 - [mail] 验证码: 691640
+2026-07-09 17:31:04.614 | INFO     | src.registrar:step2_fill_info:176 - [step2] 验证码=691640 密码=Oneaaa8008
+2026-07-09 17:31:54.151 | INFO     | src.registrar:step2_fill_info:208 - [step2] 点击 確認画面へ (attempt=1)
+2026-07-09 17:32:00.444 | ERROR    | src.registrar:step2_fill_info:219 - [step2] 失败 attempt=1: メールアドレス・確認コード・パスワードのいずれかが誤っています。
+2026-07-09 17:32:00.444 | WARNING  | src.registrar:step2_fill_info:169 - [step2] 重试第 2/2 次
+2026-07-09 17:32:01.456 | INFO     | src.registrar:step2_fill_info:174 - [step2] 重新填写密码...
+2026-07-09 17:32:01.456 | INFO     | src.registrar:step2_fill_info:176 - [step2] 验证码=691640 密码=Oneaaa8008
+2026-07-09 17:32:56.360 | INFO     | src.registrar:step2_fill_info:208 - [step2] 点击 確認画面へ (attempt=2)
+2026-07-09 17:33:03.394 | ERROR    | src.registrar:step2_fill_info:219 - [step2] 失败 attempt=2: メールアドレス・確認コード・パスワードのいずれかが誤っています。
+2026-07-09 17:33:04.325 | INFO     | src.phone_client:release:179 - [firefox] 号码已释放 pkey=3B3F9AB2E76B...
